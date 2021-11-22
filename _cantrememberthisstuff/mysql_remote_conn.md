@@ -21,7 +21,7 @@ OS:
   - Linux
   - MacOS
 environment: |
-  - Network
+  - Networking
 command_types:
   - Admin
 references:

@@ -22,7 +22,7 @@ OS:
   - Linux
   
 environment: |
-  - Network
+  - Networking
   
 command_types:
   - Information_Gathering

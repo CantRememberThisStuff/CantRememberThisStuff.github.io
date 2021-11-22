@@ -18,7 +18,7 @@ OS:
 environment: |
   - Local
   - Web
-  - Network
+  - Networking
 command_types:
   - Information_Gathering
 references:

@@ -18,7 +18,7 @@ target: |
 OS:
   - Linux
 environment: |
-  - Network
+  - Networking
 command_types:
   - Admin
   - Exploitation
