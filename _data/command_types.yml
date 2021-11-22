@@ -22,3 +22,7 @@ Persistence:
 Privilege_Escalation:
   label: Privilege Escalation
   description: Command focuses on privilege escalation.
+  
+Reverse_Shell:
+  label: Reverse_Shell
+  description: Command focuses on Reverse Shell.
