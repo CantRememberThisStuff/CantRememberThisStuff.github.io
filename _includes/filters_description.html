@@ -11,7 +11,7 @@
     <dd>{{ command.description | markdownify }}</dd>
     {% endfor %}
 
-    {% for environment_pair in site.data.environment_types %}
+    {% for environment_pair in site.data.environment %}
     {% assign environment = environment_pair[1] %}
     <dt class="filter-name">{{ environment.label }}</dt>
     <dd>{{ environment.description | markdownify }}</dd>

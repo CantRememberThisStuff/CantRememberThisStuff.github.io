@@ -7,10 +7,10 @@
     {% endif %}
     {% endfor %}
 
-    {% for environment_pair in site.data.environment_types %}
+    {% for environment_pair in site.data.environment %}
     {% assign environment_id = environment_pair[0] %}
     {% assign environment = environment_pair[1] %}
-    {% if include.bin.environment_types contains environment_id %}
+    {% if include.bin.environment contains environment_id %}
     <li><a href="{{ include.bin.url }}#{{ environment_id }}">{{ environment.label }}</a></li>
     {% endif %}
     {% endfor %}
