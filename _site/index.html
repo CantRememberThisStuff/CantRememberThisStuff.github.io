@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>
             
-            WADComs
+            Can't Remember This Stuff
         </title>
         <link rel="icon" href="/assets/logo.png">
         <link id="pagestyle" rel="stylesheet" href="/assets/style.css" type="text/css"/>
@@ -150,11 +150,31 @@
 	
     </ul>
     <ul id="bin-search-filters" class="filter-list">
+	<h3>Target OS:</h3>
+	
+	
+	
+	<li><input type="checkbox" id="Linux_target" name="target_name" onclick="handleChange(this, &quot;Linux_target&quot;);" /><label id="Linux_target_label" for="Linux_target" data-title="Command is targeting Linux.">Linux_target</label></li>
+	
+	
+	
+	<li><input type="checkbox" id="MacOS_target" name="target_name" onclick="handleChange(this, &quot;MacOS_target&quot;);" /><label id="MacOS_target_label" for="MacOS_target" data-title="Command is targeting Linux.">MacOS_target</label></li>
+	
+	
+	
+	<li><input type="checkbox" id="Windows_target" name="target_name" onclick="handleChange(this, &quot;Windows_target&quot;);" /><label id="Windows_target_label" for="Windows_target" data-title="Command is targeting Windows.">Windows_target</label></li>
+	
+    </ul>
+    <ul id="bin-search-filters" class="filter-list">
 	<h3>OS:</h3>
 	
 	
 	
 	<li><input type="checkbox" id="Linux" name="OS_name" onclick="handleChange(this, &quot;Linux&quot;);" /><label id="Linux_label" for="Linux" data-title="Command can be run on Linux.">Linux</label></li>
+	
+	
+	
+	<li><input type="checkbox" id="MacOS" name="OS_name" onclick="handleChange(this, &quot;MacOS&quot;);" /><label id="MacOS_label" for="MacOS" data-title="Command can be run on MacOS.">MacOS</label></li>
 	
 	
 	
@@ -197,6 +217,21 @@
     
     
     <li><a href="/cantrememberthisstuff/winPEAS/#PrivEsc">Privilege Escalation</a></li>
+    
+    
+
+    <ul class="filter-list">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 
@@ -266,19 +301,23 @@
     
     
     
+    
+    
+    
+    
     <li><a href="/cantrememberthisstuff/winPEAS/#Windows">Windows</a></li>
     
     
 </ul>
-</p></td>
-            </tr>
+&lt;/p&gt;&lt;/td&gt;
+            &lt;/tr&gt;
             
-        </tbody>
+        &lt;/tbody&gt;
         <tfoot>
 		<tr><td id="search-message" colspan="2">Couldn't find the command you're looking for? <a href="/contribute/">Contribute</a> your own!</td></tr>
         </tfoot>
-    </table>
-</div>
+    &lt;/table&gt;
+&lt;/div&gt;
 
 <script>
 
@@ -331,10 +370,12 @@
      var allItems = document.getElementsByName("item_name");
      var allFilters = document.getElementsByName("service_name");
      var allAttacks = document.getElementsByName("attack_name");
+     var allTargets = document.getElementsByName("target_name");
      var allOS = document.getElementsByName("OS_name");
      var allItems_parsed = [];
      var allFilters_parsed = [];
-     var allAttacks_parsed = []; 
+     var allAttacks_parsed = [];
+     var allTargets_parsed = []; 
      var allOS_parsed = []; 
 
      allFilters.forEach((f) => {
@@ -349,6 +390,10 @@
 	     allAttacks_parsed.push(a.id.toLowerCase());
      });
      var attack_chosen = functionPatterns.filter(element => allAttacks_parsed.includes(element));
+     allTargets.forEach((t) => {
+	     allTargets_parsed.push(t.id.toLowerCase());
+     });
+     var target_chosen = functionPatterns.filter(element => allTargets_parsed.includes(element));
      allOS.forEach((o) => {
 	     allOS_parsed.push(o.id.toLowerCase());
      });
@@ -485,6 +530,18 @@
 			 });
 		 });
 	 }
+
+	 var found_target = -1;
+	 if (target_chosen.length !== 0) {
+		 found_target = 0;
+		 target_chosen.forEach((a) => {
+			 functionElems.forEach((i) => {
+				 if (i.innerText.toLowerCase() == a) {
+					 found_target = found_target + 1;
+				 }
+			 });
+		 });
+	 }
 					 
 	 var found_os = -1;
 	 if (os_chosen.length !== 0) {
@@ -498,7 +555,7 @@
 		 });
 	 }
 
-	 if ((!filled && (found_attack < 1 && found_filter < 1 && found_os < 1 && !found_binName)) || (found_attack == 0 || found_filter == 0 || found_os == 0) || (!filled && item_chosen.length !== 0) || ((found_attack !== attack_chosen.length && found_attack !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1)) || (binPattern.length !== 0 && !found_binName)) {
+	 if ((!filled && (found_target < 1 && found_attack < 1 && found_filter < 1 && found_os < 1 && !found_binName)) || (found_target == 0 || found_attack == 0 || found_filter == 0 || found_os == 0) || (!filled && item_chosen.length !== 0) || ((found_attack !== attack_chosen.length && found_attack !== -1) || (found_target !== target_chosen.length && found_target !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1)) || (binPattern.length !== 0 && !found_binName)) {
 		row.style.display = 'none';
 	 } else {
 	    	row.style.display = '';
@@ -567,6 +624,7 @@
  setup();
 </script>
 
+</ul></p></td></tr></tbody></table></div>
 
 
         <script>

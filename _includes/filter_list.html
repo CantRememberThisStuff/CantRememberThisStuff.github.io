@@ -7,6 +7,15 @@
     {% endif %}
     {% endfor %}
 
+    <ul class="filter-list">
+    {% for target_pair in site.data.target %}
+    {% assign target_id = target_pair[0] %}
+    {% assign target = target_pair[1] %}
+    {% if include.bin.target contains target_id %}
+    <li><a href="{{ include.bin.url }}#{{ target_id }}">{{ target.label }}</a></li>
+    {% endif %}
+    {% endfor %}
+
     {% for item_pair in site.data.items %}
     {% assign item_id = item_pair[0] %}
     {% assign item = item_pair[1] %}

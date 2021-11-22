@@ -3,6 +3,10 @@ Linux:
   label: Linux
   description: Command can be run on Linux.
 
+MacOS:
+  label: MacOS
+  description: Command can be run on MacOS.
+
 Windows:
   label: Windows
   description: Command can be run on Windows.
