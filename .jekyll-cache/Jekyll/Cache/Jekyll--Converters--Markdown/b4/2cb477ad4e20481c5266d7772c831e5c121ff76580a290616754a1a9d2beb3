@@ -1,2 +1,0 @@
-I"á<p>SafetyKatz.exe is part of the GhostPack suite of tools and is a combination of SharpDump and Mimikatz. The following command will dump the LSASS process and run Mimikatz to extract credentials from the dumped process.</p>
-:ET

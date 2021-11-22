@@ -1,7 +1,0 @@
-I"õ<p>SharpWMI.exe is part of the GhostPack suite of tools that provides WMI functionality, such as local/remote WMI queries, remote WMI process creation, and remote execution of arbitrary VBS through WMI events. The following command will simply list all processes running on the local system.</p>
-
-<p>Command Reference:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Get all processes: "select * from win32_process"
-</code></pre></div></div>
-:ET

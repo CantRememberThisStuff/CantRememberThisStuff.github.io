@@ -1,9 +1,0 @@
-I"�<p>Seatbelt.exe is part of the GhostPack suite of tools that will perform a lot of “safety checks” on the Windows host and collect system data that could be useful for potential privilege escalation or persistence methods. The following command will run all checks on the system and store the output in a file (WARNING: will collect a lot of data. remove <code class="language-plaintext highlighter-rouge">-full</code> for less output).</p>
-
-<p>Command Reference:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Run all checks: -group=all
-
-Output File: output.txt
-</code></pre></div></div>
-:ET
