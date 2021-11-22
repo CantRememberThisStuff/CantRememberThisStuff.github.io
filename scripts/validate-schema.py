@@ -13,7 +13,9 @@ def build_schema():
     service_names = next(parse_yaml('_data/services.yml')).keys()
     item_names = next(parse_yaml('_data/items.yml')).keys()
     OS_names = next(parse_yaml('_data/OS.yml')).keys()
-    attack_names = next(parse_yaml('_data/attack_types.yml')).keys()
+    command_names = next(parse_yaml('_data/command_types.yml')).keys()
+    environment_names = next(parse_yaml('_data/environment.yml')).keys()
+    target_names = next(parse_yaml('_data/target.yml')).keys()
     return {
         "definitions": {
             'examples': {
@@ -54,10 +56,24 @@ def build_schema():
                 },
                 'additionalProperties': False
             },
-            'attack_types': {
+            'target': {
                 'type': 'array',
                 "patternProperties": {
-                    '^({})$'.format('|'.join(attack_names)): {'$ref': '#/definitions/examples'}
+                    '^({})$'.format('|'.join(target_names)): {'$ref': '#/definitions/examples'}
+                },
+                'additionalProperties': False
+            },
+            'environment': {
+                'type': 'array',
+                "patternProperties": {
+                    '^({})$'.format('|'.join(environment_names)): {'$ref': '#/definitions/examples'}
+                },
+                'additionalProperties': False
+            },
+            'command_types': {
+                'type': 'array',
+                "patternProperties": {
+                    '^({})$'.format('|'.join(command_names)): {'$ref': '#/definitions/examples'}
                 },
                 'additionalProperties': False
             },
