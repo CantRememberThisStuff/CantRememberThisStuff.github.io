@@ -1,0 +1,9 @@
+I"<p>ropnop’s kerbrute bruteforces and enumerates valid Active Directory accounts through Kerberos Pre-Authentication. The following command will attempt to brute force valid username and passwords logins given a list of credentials (in the format <code class="language-plaintext highlighter-rouge">username:password</code>).</p>
+
+<p>Command Reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Domain: test.local
+
+Credential List: credentials.txt
+</code></pre></div></div>
+:ET

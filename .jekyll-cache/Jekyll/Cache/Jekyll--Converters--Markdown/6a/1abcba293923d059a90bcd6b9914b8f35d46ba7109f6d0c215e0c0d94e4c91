@@ -1,0 +1,11 @@
+I"Á<p>PowerView is a module within PowerSploit written in PowerShell to gain network situational awareness on Windows domains. The below command will query the Domain Controller for a list of members of the Domain Admins group.</p>
+
+<p>Command Reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Target IP: 10.10.10.1
+
+Domain: test.local
+
+Group: Domain Admins
+</code></pre></div></div>
+:ET

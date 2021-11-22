@@ -1,0 +1,17 @@
+I"3<p>Impacket’s addcomputer.py will add a computer account to the domain and set its password. The following command will create a new computer over LDAPS. Plain LDAP is not supported, as it doesn’t allow setting the password of the new computer.</p>
+
+<p>Command Reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Target IP: 10.10.10.1
+
+Domain: test.local
+
+New Computer Password: TestPassword123
+
+New Computer Name: testComputer
+
+Username: john
+
+Password: password123
+</code></pre></div></div>
+:ET

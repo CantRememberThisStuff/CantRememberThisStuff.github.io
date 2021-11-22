@@ -1,0 +1,13 @@
+I"•<p>Smbclient is a tool used to communicate with SMB servers. The following command will list out all available shares on the target server using valid credentials.</p>
+
+<p>Command Reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Target IP: 10.10.10.1
+
+Domain: test.local
+
+Username: john
+
+Password: password123
+</code></pre></div></div>
+:ET

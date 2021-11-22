@@ -1,0 +1,15 @@
+I"R<p>Impacket’s atexec.py uses the Task Scheduler service on the remote Windows host to execute the given command. It will create a windows task with a random name, trigger the task, and then delete it. The following command executes <code class="language-plaintext highlighter-rouge">whoami</code> on the remote Windows host.</p>
+
+<p>Command Reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Target IP: 10.10.10.1
+
+Domain: test.local
+
+Username: john
+
+Password: password123
+
+Command Executed: whoami
+</code></pre></div></div>
+:ET

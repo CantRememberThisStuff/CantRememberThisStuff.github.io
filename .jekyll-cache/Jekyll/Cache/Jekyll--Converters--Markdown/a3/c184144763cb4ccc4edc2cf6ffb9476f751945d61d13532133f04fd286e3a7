@@ -1,0 +1,13 @@
+I"v<p>pyWhisker is a tool allowing users to manipulate the msDS-KeyCredentialLink attribute of a target user/computer to obtain full control over that object. It’s based on Impacket and on our Python equivalent of Michael Grafnetter’s DSInternals called PyDSInternals. This tool, along with Dirk-jan’s PKINITtools allow for a complete primitive exploitation on UNIX-based systems only.</p>
+
+<p>Command Reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Target IP: 10.10.10.1
+
+Domain: test.local
+
+Username: john
+
+Password: password123
+</code></pre></div></div>
+:ET

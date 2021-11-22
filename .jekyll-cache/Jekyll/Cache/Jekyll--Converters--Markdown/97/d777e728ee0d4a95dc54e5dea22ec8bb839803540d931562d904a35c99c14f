@@ -1,0 +1,11 @@
+I"<p>Nmap’s <code class="language-plaintext highlighter-rouge">krb5-enum-users</code> script attempts to bruteforce and enumerate valid Active Directory accounts through Kerberos Pre-Authentication. The following command will attempt to enumerate valid usernames given a list of usernames to try.</p>
+
+<p>Command Reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Target IP: 10.10.10.1
+
+Domain: test.local
+
+Username List: usernames.txt
+</code></pre></div></div>
+:ET

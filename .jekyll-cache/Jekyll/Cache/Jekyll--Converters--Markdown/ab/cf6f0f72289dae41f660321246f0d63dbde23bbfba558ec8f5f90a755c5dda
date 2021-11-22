@@ -1,0 +1,19 @@
+I"a<p>Impacket’s getST.py will request a Service Ticket and save it as ccache. If the account has constrained delegation privileges, you can use the <code class="language-plaintext highlighter-rouge">-impersonate</code> flag to request a ticket on behalf of another user. The following command will impersonate the Administrator account and request a Service Ticket on its behalf for the <code class="language-plaintext highlighter-rouge">www</code> service on host <code class="language-plaintext highlighter-rouge">server01.test.local</code>.</p>
+
+<p>Command Reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Target IP: 10.10.10.1
+
+Domain: test.local
+
+Service: www
+
+Host Name: server01.test.local
+
+Username: john
+
+Password: password123
+
+Impersonated User: Administrator
+</code></pre></div></div>
+:ET

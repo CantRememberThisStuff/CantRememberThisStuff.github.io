@@ -1,0 +1,13 @@
+I"o<p>Impacket’s GetADUsers.py will attempt to gather data about the domain’s users and their corresponding email addresses.</p>
+
+<p>Command Reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Target IP: 10.10.10.1
+
+Domain: test.local
+
+Username: john
+
+Password: password123
+</code></pre></div></div>
+:ET

@@ -1,0 +1,16 @@
+---
+title: WADComs
+
+exclude: ['/scripts', '/Gemfile', '/Makefile', '/README.md']
+
+permalink: pretty
+
+collections:
+  cantrememberthisstuff:
+    output: true
+
+defaults:
+  - scope:
+      path: '_cantrememberthisstuff'
+    values:
+      layout: bin

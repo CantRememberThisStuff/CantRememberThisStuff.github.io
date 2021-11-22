@@ -1,0 +1,23 @@
+I"C<p>windapsearch enumerates users, groups, and computers from a Windows domain through LDAP queries. The following command enumerates all 3 of the above mentioned using provided credentials.</p>
+
+<p>Command Reference:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Target IP: 10.10.10.1
+
+Domain: test.local
+
+Username: john
+
+Password: password123
+
+Enum Users: -U
+
+Enum Groups: -G
+
+Enum Domain Admins: --da
+
+Enum members of group: -m "Remote Desktop Users"
+
+Enum Computers and resolve DNS: -C -r
+</code></pre></div></div>
+:ET
