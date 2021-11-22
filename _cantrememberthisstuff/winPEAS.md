@@ -12,6 +12,8 @@ command: |
   winpeas.exe cmd > output.txt
 items:
   - Shell
+target: |
+  - Windows_target
 OS:
   - Windows
 attack_types:
