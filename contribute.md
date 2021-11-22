@@ -5,7 +5,7 @@ title: Contribute
 
 ## Structure
 
-Each WAD Command is defined in a file in the [`_wadcoms/`] folder named as `<tool name>.md`, such file consists only of a [YAML] front matter which describes the command and its attributes.
+Each Command is defined in a file in the [`_cantrememberthisstuff/`] folder named as `<command_name>.md`, such files consists only of a [YAML] front matter which describes the command and its attributes.
 
 The full syntax is the following:
 
@@ -62,8 +62,8 @@ Before sending a pull request of a new command, ensure the following:
 Pull requests adding new items in [`_data/items.yml`], services in [`_data/services.yml`], OS in [`_data/OS.yml`], or attack types in [`_data/attack_types.yml`] are allowed and subjected to project maintainers vetting.
 
 [YAML]: http://yaml.org/
-[`_wadcoms/`]: https://github.com/WADComs/WADComs.github.io/tree/master/_wadcoms
-[`_data/services.yml`]: https://github.com/WADComs/WADComs.github.io/blob/master/_data/services.yml
-[`_data/items.yml`]: https://github.com/WADComs/WADComs.github.io/blob/master/_data/items.yml
-[`_data/OS.yml`]: https://github.com/WADComs/WADComs.github.io/blob/master/_data/OS.yml
-[`_data/attack_types.yml`]: https://github.com/WADComs/WADComs.github.io/blob/master/_data/attack_types.yml
+[`_cantrememberthisstuff/`]: https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/tree/master/_cantrememberthisstuff
+[`_data/services.yml`]: https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/services.yml
+[`_data/items.yml`]: https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/items.yml
+[`_data/OS.yml`]: https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/OS.yml
+[`_data/attack_types.yml`]: https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/attack_types.yml

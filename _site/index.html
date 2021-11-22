@@ -164,7 +164,7 @@
 
 </div>
 <div style="margin-top: -20px;">
-<input id="bin-search" type="text" placeholder="Search among 0 commands: &lt;command&gt; +&lt;filter&gt; ..." />
+<input id="bin-search" type="text" placeholder="Search among 1 commands: &lt;command&gt; +&lt;filter&gt; ..." />
 </div>
 
 <div id="bin-table-wrapper">
@@ -176,6 +176,102 @@
         </thead>
         <tbody>
 	     
+            
+            <tr>
+		    <td><div class="bin-name"><div style="flex: 0 0 97%"><a href="/cantrememberthisstuff/winPEAS/" id="/cantrememberthisstuff/winPEAS/" style="text-decoration: none; color: DarkGreen;">winpeas.exe cmd &gt; output.txt
+</a></div><div style="flex: 1;"><a href="javascript:void(0)" onclick="copyFunction('/cantrememberthisstuff/winPEAS/')"><img src="/assets/copy-button.svg" alt="Copy" title="Copy" id="/cantrememberthisstuff/winPEAS/_img" /></a></div></div><p style="margin-top: -12px;"><ul class="filter-list">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/winPEAS/#PrivEsc">Privilege Escalation</a></li>
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/winPEAS/#Shell">Shell</a></li>
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/winPEAS/#Windows">Windows</a></li>
+    
+    
+</ul>
+</p></td>
+            </tr>
             
         </tbody>
         <tfoot>
@@ -190,6 +286,9 @@
 	 var copyCommand = document.getElementById(file_url);
 
 	 navigator.clipboard.writeText(copyCommand.innerText).then(() => {
+		 
+		 document.getElementById("/cantrememberthisstuff/winPEAS/_img").alt = "Copy";
+		 document.getElementById("/cantrememberthisstuff/winPEAS/_img").title = "Copy";
 		 
 		 document.getElementById(file_url + "_img").alt = "Copied";
 		 document.getElementById(file_url + "_img").title = "Copied";
