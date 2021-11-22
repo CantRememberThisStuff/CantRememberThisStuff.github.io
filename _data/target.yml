@@ -1,0 +1,12 @@
+---
+Linux:
+  label: Linux_target
+  description: Command is targeting Linux.
+
+MacOS:
+  label: MacOS_target
+  description: Command is targeting Linux.
+
+Windows:
+  label: Windows_target
+  description: Command is targeting Windows.
