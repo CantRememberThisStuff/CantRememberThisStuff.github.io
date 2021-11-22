@@ -1,9 +1,17 @@
 <ul class="filter-list">
-    {% for attack_pair in site.data.attack_types %}
-    {% assign attack_id = attack_pair[0] %}
-    {% assign attack = attack_pair[1] %}
-    {% if include.bin.attack_types contains attack_id %}
-    <li><a href="{{ include.bin.url }}#{{ attack_id }}">{{ attack.label }}</a></li>
+    {% for command_pair in site.data.command_types %}
+    {% assign command_id = command_pair[0] %}
+    {% assign command = command_pair[1] %}
+    {% if include.bin.command_types contains command_id %}
+    <li><a href="{{ include.bin.url }}#{{ command_id }}">{{ command.label }}</a></li>
+    {% endif %}
+    {% endfor %}
+
+    {% for environment_pair in site.data.environment_types %}
+    {% assign environment_id = environment_pair[0] %}
+    {% assign environment = environment_pair[1] %}
+    {% if include.bin.environment_types contains environment_id %}
+    <li><a href="{{ include.bin.url }}#{{ environment_id }}">{{ environment.label }}</a></li>
     {% endif %}
     {% endfor %}
 

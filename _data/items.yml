@@ -15,10 +15,6 @@ Hash:
   label: Hash
   description: You've found hash(es) and need to know what you can do with them.
 
-TGS:
-  label: TGS
-  description: You've found a user's Ticket Granting Service and need to know what you can do with it.
-
 Shell:
   label: Shell
-  description: You have a shell on the Windows host and need to know what you can do.
+  description: You have a shell on the target host and need to know what you can do.

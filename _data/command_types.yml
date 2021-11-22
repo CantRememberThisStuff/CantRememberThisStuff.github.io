@@ -1,0 +1,24 @@
+---
+Admin:
+  label: Admin Stuff
+  description: Command focuses on system administration
+  
+Information_Gathering:
+  label: Information Gathering
+  description: Command focuses on information gathering.
+  
+Host_Enumeration:
+  label: Host Enumeration
+  description: Command focuses on host enumeration.
+
+Exploitation:
+  label: Exploitation
+  description: Command focuses on exploitation.
+
+Persistence:
+  label: Persistence
+  description: Command focuses on persistence.
+  
+Privilege_Escalation:
+  label: Privilege Escalation
+  description: Command focuses on privilege escalation.

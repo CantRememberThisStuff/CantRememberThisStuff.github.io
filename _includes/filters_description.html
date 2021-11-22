@@ -5,10 +5,16 @@
     <dd>{{ filter.description | markdownify }}</dd>
     {% endfor %}
 
-    {% for attack_pair in site.data.attack_types %}
-    {% assign attack = attack_pair[1] %}
-    <dt class="filter-name">{{ attack.label }}</dt>
-    <dd>{{ attack.description | markdownify }}</dd>
+    {% for command_pair in site.data.command_types %}
+    {% assign command = command_pair[1] %}
+    <dt class="filter-name">{{ command.label }}</dt>
+    <dd>{{ command.description | markdownify }}</dd>
+    {% endfor %}
+
+    {% for environment_pair in site.data.environment_types %}
+    {% assign environment = environment_pair[1] %}
+    <dt class="filter-name">{{ environment.label }}</dt>
+    <dd>{{ environment.description | markdownify }}</dd>
     {% endfor %}
 
     {% for target_pair in site.data.target %}

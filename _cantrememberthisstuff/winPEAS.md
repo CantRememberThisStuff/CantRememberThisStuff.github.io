@@ -10,15 +10,18 @@ description: |
 
 command: |
   winpeas.exe cmd > output.txt
-items:
+items: |
   - Shell
 target: |
   - Windows_target
-OS:
+environment: |
+  - Local
+OS: |
   - Windows
-attack_types:
-  - PrivEsc
-references:
+command_types: |
+  - Enumeration
+  - Privilege_Escalation
+references: |
   - https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS
   - https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/blob/master/winPEAS/winPEASexe/README.md
   - https://book.hacktricks.xyz/windows/windows-local-privilege-escalation

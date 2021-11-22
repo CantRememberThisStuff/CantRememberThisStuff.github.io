@@ -24,11 +24,19 @@
         {% endfor %}
     </ul>
     <ul id="bin-search-filters" class="filter-list">
-	<h3>Attack Type:</h3>
-	{% for attack_pair in site.data.attack_types %}
-	{% assign attack_id = attack_pair[0] %}
-	{% assign attack = attack_pair[1] %}
-	<li><input type="checkbox" id="{{ attack.label }}" name="attack_name" onclick='handleChange(this, "{{ attack.label }}");'><label id="{{ attack.label }}_label" for="{{ attack.label }}" data-title="{{ attack.description | replace: '\n', ' ' }}">{{ attack.label }}</label></li>
+	<h3>Command Type:</h3>
+	{% for command_pair in site.data.command_types %}
+	{% assign command_id = command_pair[0] %}
+	{% assign command = command_pair[1] %}
+	<li><input type="checkbox" id="{{ command.label }}" name="command_name" onclick='handleChange(this, "{{ command.label }}");'><label id="{{ command.label }}_label" for="{{ command.label }}" data-title="{{ command.description | replace: '\n', ' ' }}">{{ command.label }}</label></li>
+	{% endfor %}
+    </ul>
+    <ul id="bin-search-filters" class="filter-list">
+	<h3>Environment Type:</h3>
+	{% for environment_pair in site.data.environment %}
+	{% assign environment_id = environment_pair[0] %}
+	{% assign environment = environment_pair[1] %}
+	<li><input type="checkbox" id="{{ environment.label }}" name="environment_name" onclick='handleChange(this, "{{ environment.label }}");'><label id="{{ environment.label }}_label" for="{{ environment.label }}" data-title="{{ environment.description | replace: '\n', ' ' }}">{{ environment.label }}</label></li>
 	{% endfor %}
     </ul>
     <ul id="bin-search-filters" class="filter-list">
@@ -40,7 +48,7 @@
 	{% endfor %}
     </ul>
     <ul id="bin-search-filters" class="filter-list">
-	<h3>OS:</h3>
+	<h3>Attacker_OS:</h3>
 	{% for OS_pair in site.data.OS %}
 	{% assign OS_id = OS_pair[0] %}
 	{% assign OS = OS_pair[1] %}
@@ -69,7 +77,7 @@
             {% endfor %}
         </tbody>
         <tfoot>
-		<tr><td id="search-message" colspan="2">Couldn't find the command you're looking for? <a href="/contribute/">Contribute</a> your own!</td></tr>
+		<tr><td id="search-message" colspan="2">Couldn't find the command you're looking for? <a href="/contribute/">Contribute</a> your own!(Still working on this)</td></tr>
         </tfoot>
     </table>
 </div>
@@ -124,12 +132,14 @@
 
      var allItems = document.getElementsByName("item_name");
      var allFilters = document.getElementsByName("service_name");
-     var allAttacks = document.getElementsByName("attack_name");
+     var allCommands = document.getElementsByName("command_name");
+     var allEnvironments = document.getElementsByName("environment_name");
      var allTargets = document.getElementsByName("target_name");
      var allOS = document.getElementsByName("OS_name");
      var allItems_parsed = [];
      var allFilters_parsed = [];
-     var allAttacks_parsed = [];
+     var allCommands_parsed = [];
+     var allEnvironments_parsed = [];
      var allTargets_parsed = []; 
      var allOS_parsed = []; 
 
@@ -141,10 +151,14 @@
 	     allItems_parsed.push(i.id.toLowerCase());
      });
      var item_chosen = functionPatterns.filter(element => allItems_parsed.includes(element));
-     allAttacks.forEach((a) => {
-	     allAttacks_parsed.push(a.id.toLowerCase());
+     allCommands.forEach((a) => {
+	     allCommands_parsed.push(a.id.toLowerCase());
      });
-     var attack_chosen = functionPatterns.filter(element => allAttacks_parsed.includes(element));
+     var command_chosen = functionPatterns.filter(element => allCommands_parsed.includes(element));
+     allEnvironments.forEach((a) => {
+	     allEnvironments_parsed.push(a.id.toLowerCase());
+     });
+     var environment_chosen = functionPatterns.filter(element => allEnvironments_parsed.includes(element));
      allTargets.forEach((t) => {
 	     allTargets_parsed.push(t.id.toLowerCase());
      });
@@ -234,13 +248,25 @@
 		 });
 	 }
 
-	 var found_attack = -1;
-	 if (attack_chosen.length !== 0) {
-		 found_attack = 0;
-		 attack_chosen.forEach((a) => {
+	 var found_command = -1;
+	 if (command_chosen.length !== 0) {
+		 found_command = 0;
+		 command_chosen.forEach((a) => {
 			 functionElems.forEach((i) => {
 				 if (i.innerText.toLowerCase() == a) {
-					 found_attack = found_attack + 1;
+					 found_command = found_command + 1;
+				 }
+			 });
+		 });
+	 }
+
+	 var found_environment = -1;
+	 if (environment_chosen.length !== 0) {
+		 found_environment = 0;
+		 environment_chosen.forEach((a) => {
+			 functionElems.forEach((i) => {
+				 if (i.innerText.toLowerCase() == a) {
+					 found_environment = found_environment + 1;
 				 }
 			 });
 		 });
@@ -270,7 +296,7 @@
 		 });
 	 }
 
-	 if ((!filled && (found_target < 1 && found_attack < 1 && found_filter < 1 && found_os < 1 && !found_binName)) || (found_target == 0 || found_attack == 0 || found_filter == 0 || found_os == 0) || (!filled && item_chosen.length !== 0) || ((found_attack !== attack_chosen.length && found_attack !== -1) || (found_target !== target_chosen.length && found_target !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1)) || (binPattern.length !== 0 && !found_binName)) {
+	 if ((!filled && (found_environment < 1 && found_target < 1 && found_command < 1 && found_filter < 1 && found_os < 1 && !found_binName)) || (found_target == 0 || found_environment == 0 || found_command == 0 || found_filter == 0 || found_os == 0) || (!filled && item_chosen.length !== 0) || ((found_environment !== environment_chosen.length && found_environment !== -1) || (found_command !== command_chosen.length && found_command !== -1) || (found_target !== target_chosen.length && found_target !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1)) || (binPattern.length !== 0 && !found_binName)) {
 		row.style.display = 'none';
 	 } else {
 	    	row.style.display = '';

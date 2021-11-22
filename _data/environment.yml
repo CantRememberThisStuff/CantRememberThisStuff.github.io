@@ -1,0 +1,20 @@
+---
+Network:
+  label: Networking
+  description: Networking related command.
+
+Web:
+  label: Web
+  description: Web application related command.
+
+Local:
+  label: Local
+  description: Local machine related command.
+
+Docker:
+  label: Docker
+  description: Docker related command.
+
+VM:
+  label: VM
+  description: Virtual Machine related command.

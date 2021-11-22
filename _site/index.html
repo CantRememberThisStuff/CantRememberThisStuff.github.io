@@ -90,11 +90,7 @@
 	
 	
 	
-	<li><input type="checkbox" id="TGS" name="item_name" onclick="handleChange(this, &quot;TGS&quot;);" /><label id="TGS_label" for="TGS" data-title="You've found a user's Ticket Granting Service and need to know what you can do with it.">TGS</label></li>
-	
-	
-	
-	<li><input type="checkbox" id="Shell" name="item_name" onclick="handleChange(this, &quot;Shell&quot;);" /><label id="Shell_label" for="Shell" data-title="You have a shell on the Windows host and need to know what you can do.">Shell</label></li>
+	<li><input type="checkbox" id="Shell" name="item_name" onclick="handleChange(this, &quot;Shell&quot;);" /><label id="Shell_label" for="Shell" data-title="You have a shell on the target host and need to know what you can do.">Shell</label></li>
 	
     </ul>
     <ul id="bin-search-filters" class="filter-list">
@@ -102,7 +98,11 @@
         
         
         
-	<li><input type="checkbox" id="SMB" name="service_name" onclick="handleChange(this, &quot;SMB&quot;);" /><label id="SMB_label" for="SMB" data-title="You've found the SMB service open  and need to know what you can do with it.">SMB</label></li>
+	<li><input type="checkbox" id="SSH" name="service_name" onclick="handleChange(this, &quot;SSH&quot;);" /><label id="SSH_label" for="SSH" data-title="You've found the SSH service open and need to know what you can do with it.">SSH</label></li>
+        
+        
+        
+	<li><input type="checkbox" id="SMB" name="service_name" onclick="handleChange(this, &quot;SMB&quot;);" /><label id="SMB_label" for="SMB" data-title="You've found the SMB service open and need to know what you can do with it.">SMB</label></li>
         
         
         
@@ -130,23 +130,55 @@
         
     </ul>
     <ul id="bin-search-filters" class="filter-list">
-	<h3>Attack Type:</h3>
+	<h3>Command Type:</h3>
 	
 	
 	
-	<li><input type="checkbox" id="Enumeration" name="attack_name" onclick="handleChange(this, &quot;Enumeration&quot;);" /><label id="Enumeration_label" for="Enumeration" data-title="Command focuses on enumeration.">Enumeration</label></li>
+	<li><input type="checkbox" id="Admin Stuff" name="command_name" onclick="handleChange(this, &quot;Admin Stuff&quot;);" /><label id="Admin Stuff_label" for="Admin Stuff" data-title="Command focuses on system administration">Admin Stuff</label></li>
 	
 	
 	
-	<li><input type="checkbox" id="Exploitation" name="attack_name" onclick="handleChange(this, &quot;Exploitation&quot;);" /><label id="Exploitation_label" for="Exploitation" data-title="Command focuses on exploitation.">Exploitation</label></li>
+	<li><input type="checkbox" id="Information Gathering" name="command_name" onclick="handleChange(this, &quot;Information Gathering&quot;);" /><label id="Information Gathering_label" for="Information Gathering" data-title="Command focuses on information gathering.">Information Gathering</label></li>
 	
 	
 	
-	<li><input type="checkbox" id="Persistence" name="attack_name" onclick="handleChange(this, &quot;Persistence&quot;);" /><label id="Persistence_label" for="Persistence" data-title="Command focuses on persistence.">Persistence</label></li>
+	<li><input type="checkbox" id="Host Enumeration" name="command_name" onclick="handleChange(this, &quot;Host Enumeration&quot;);" /><label id="Host Enumeration_label" for="Host Enumeration" data-title="Command focuses on host enumeration.">Host Enumeration</label></li>
 	
 	
 	
-	<li><input type="checkbox" id="Privilege Escalation" name="attack_name" onclick="handleChange(this, &quot;Privilege Escalation&quot;);" /><label id="Privilege Escalation_label" for="Privilege Escalation" data-title="Command focuses on privilege escalation.">Privilege Escalation</label></li>
+	<li><input type="checkbox" id="Exploitation" name="command_name" onclick="handleChange(this, &quot;Exploitation&quot;);" /><label id="Exploitation_label" for="Exploitation" data-title="Command focuses on exploitation.">Exploitation</label></li>
+	
+	
+	
+	<li><input type="checkbox" id="Persistence" name="command_name" onclick="handleChange(this, &quot;Persistence&quot;);" /><label id="Persistence_label" for="Persistence" data-title="Command focuses on persistence.">Persistence</label></li>
+	
+	
+	
+	<li><input type="checkbox" id="Privilege Escalation" name="command_name" onclick="handleChange(this, &quot;Privilege Escalation&quot;);" /><label id="Privilege Escalation_label" for="Privilege Escalation" data-title="Command focuses on privilege escalation.">Privilege Escalation</label></li>
+	
+    </ul>
+    <ul id="bin-search-filters" class="filter-list">
+	<h3>Environment Type:</h3>
+	
+	
+	
+	<li><input type="checkbox" id="Networking" name="environment_name" onclick="handleChange(this, &quot;Networking&quot;);" /><label id="Networking_label" for="Networking" data-title="Networking related command.">Networking</label></li>
+	
+	
+	
+	<li><input type="checkbox" id="Web" name="environment_name" onclick="handleChange(this, &quot;Web&quot;);" /><label id="Web_label" for="Web" data-title="Web application related command.">Web</label></li>
+	
+	
+	
+	<li><input type="checkbox" id="Local" name="environment_name" onclick="handleChange(this, &quot;Local&quot;);" /><label id="Local_label" for="Local" data-title="Local machine related command.">Local</label></li>
+	
+	
+	
+	<li><input type="checkbox" id="Docker" name="environment_name" onclick="handleChange(this, &quot;Docker&quot;);" /><label id="Docker_label" for="Docker" data-title="Docker related command.">Docker</label></li>
+	
+	
+	
+	<li><input type="checkbox" id="VM" name="environment_name" onclick="handleChange(this, &quot;VM&quot;);" /><label id="VM_label" for="VM" data-title="Virtual Machine related command.">VM</label></li>
 	
     </ul>
     <ul id="bin-search-filters" class="filter-list">
@@ -166,7 +198,7 @@
 	
     </ul>
     <ul id="bin-search-filters" class="filter-list">
-	<h3>OS:</h3>
+	<h3>Attacker_OS:</h3>
 	
 	
 	
@@ -184,7 +216,7 @@
 
 </div>
 <div style="margin-top: -20px;">
-<input id="bin-search" type="text" placeholder="Search among 1 commands: &lt;command&gt; +&lt;filter&gt; ..." />
+<input id="bin-search" type="text" placeholder="Search among 2 commands: &lt;command&gt; +&lt;filter&gt; ..." />
 </div>
 
 <div id="bin-table-wrapper">
@@ -216,8 +248,18 @@
     
     
     
-    <li><a href="/cantrememberthisstuff/winPEAS/#PrivEsc">Privilege Escalation</a></li>
     
+    
+    
+    
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/winPEAS/#Privilege_Escalation">Privilege Escalation</a></li>
+    
+    
+
     
 
     
@@ -236,10 +278,6 @@
     
     
 
-    
-    
-    
-    
     
     
     
@@ -293,6 +331,10 @@
     
     
     
+    
+    
+    
+    
 
     
     
@@ -313,9 +355,141 @@
 </p></td>
             </tr>
             
+            <tr>
+		    <td><div class="bin-name"><div style="flex: 0 0 97%"><a href="/cantrememberthisstuff/grep_handy_stuff/" id="/cantrememberthisstuff/grep_handy_stuff/" style="text-decoration: none; color: DarkGreen;">&lt;command with output&gt; | grep --color=auto -E &#39;[uU][sS][eE][rR]|[Pp][aA][sS]{2}|[dD][bB]|[vV][eE][rR][sS][iI][oO][nN]|[cC][rR][eE][dD]|[rR][oO]{2}[tT]|[aA][dD][mM][iI][nN]|href|JSESSION|JWT|jwt|[cC][oO]{2}[kK][iI][eE]|[hH][aA][sS][hH]|[0-9]{1,3}(\.[0-9]{1,3}){1,3}\:{0,1}[0-9]+&#39;
+</a></div><div style="flex: 1;"><a href="javascript:void(0)" onclick="copyFunction('/cantrememberthisstuff/grep_handy_stuff/')"><img src="/assets/copy-button.svg" alt="Copy" title="Copy" id="/cantrememberthisstuff/grep_handy_stuff/_img" /></a></div></div><p style="margin-top: -12px;"><ul class="filter-list">
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/grep_handy_stuff/#Admin">Admin Stuff</a></li>
+    
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/grep_handy_stuff/#Information_Gathering">Information Gathering</a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/grep_handy_stuff/#Linux">Linux_target</a></li>
+    
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/grep_handy_stuff/#MacOS">MacOS_target</a></li>
+    
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/grep_handy_stuff/#Windows">Windows_target</a></li>
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/grep_handy_stuff/#Linux">Linux</a></li>
+    
+    
+    
+    
+    
+    <li><a href="/cantrememberthisstuff/grep_handy_stuff/#MacOS">MacOS</a></li>
+    
+    
+    
+    
+    
+    
+</ul>
+</p></td>
+            </tr>
+            
         </tbody>
         <tfoot>
-		<tr><td id="search-message" colspan="2">Couldn't find the command you're looking for? <a href="/contribute/">Contribute</a> your own!</td></tr>
+		<tr><td id="search-message" colspan="2">Couldn't find the command you're looking for? <a href="/contribute/">Contribute</a> your own!(Still working on this)</td></tr>
         </tfoot>
     </table>
 </div>
@@ -326,6 +500,9 @@
 	 var copyCommand = document.getElementById(file_url);
 
 	 navigator.clipboard.writeText(copyCommand.innerText).then(() => {
+		 
+		 document.getElementById("/cantrememberthisstuff/grep_handy_stuff/_img").alt = "Copy";
+		 document.getElementById("/cantrememberthisstuff/grep_handy_stuff/_img").title = "Copy";
 		 
 		 document.getElementById("/cantrememberthisstuff/winPEAS/_img").alt = "Copy";
 		 document.getElementById("/cantrememberthisstuff/winPEAS/_img").title = "Copy";
@@ -370,12 +547,14 @@
 
      var allItems = document.getElementsByName("item_name");
      var allFilters = document.getElementsByName("service_name");
-     var allAttacks = document.getElementsByName("attack_name");
+     var allCommands = document.getElementsByName("command_name");
+     var allEnvironments = document.getElementsByName("environment_name");
      var allTargets = document.getElementsByName("target_name");
      var allOS = document.getElementsByName("OS_name");
      var allItems_parsed = [];
      var allFilters_parsed = [];
-     var allAttacks_parsed = [];
+     var allCommands_parsed = [];
+     var allEnvironments_parsed = [];
      var allTargets_parsed = []; 
      var allOS_parsed = []; 
 
@@ -387,10 +566,14 @@
 	     allItems_parsed.push(i.id.toLowerCase());
      });
      var item_chosen = functionPatterns.filter(element => allItems_parsed.includes(element));
-     allAttacks.forEach((a) => {
-	     allAttacks_parsed.push(a.id.toLowerCase());
+     allCommands.forEach((a) => {
+	     allCommands_parsed.push(a.id.toLowerCase());
      });
-     var attack_chosen = functionPatterns.filter(element => allAttacks_parsed.includes(element));
+     var command_chosen = functionPatterns.filter(element => allCommands_parsed.includes(element));
+     allEnvironments.forEach((a) => {
+	     allEnvironments_parsed.push(a.id.toLowerCase());
+     });
+     var environment_chosen = functionPatterns.filter(element => allEnvironments_parsed.includes(element));
      allTargets.forEach((t) => {
 	     allTargets_parsed.push(t.id.toLowerCase());
      });
@@ -493,14 +676,6 @@
 	     
 	     
 	     
-		 if (i.innerText.toLowerCase() == "tgs" && i.className !== "match") {
-	         filled = false;
-	     }
-
-	     
-	     
-	     
-	     
 		 if (i.innerText.toLowerCase() == "shell" && i.className !== "match") {
 	         filled = false;
 	     }
@@ -520,13 +695,25 @@
 		 });
 	 }
 
-	 var found_attack = -1;
-	 if (attack_chosen.length !== 0) {
-		 found_attack = 0;
-		 attack_chosen.forEach((a) => {
+	 var found_command = -1;
+	 if (command_chosen.length !== 0) {
+		 found_command = 0;
+		 command_chosen.forEach((a) => {
 			 functionElems.forEach((i) => {
 				 if (i.innerText.toLowerCase() == a) {
-					 found_attack = found_attack + 1;
+					 found_command = found_command + 1;
+				 }
+			 });
+		 });
+	 }
+
+	 var found_environment = -1;
+	 if (environment_chosen.length !== 0) {
+		 found_environment = 0;
+		 environment_chosen.forEach((a) => {
+			 functionElems.forEach((i) => {
+				 if (i.innerText.toLowerCase() == a) {
+					 found_environment = found_environment + 1;
 				 }
 			 });
 		 });
@@ -556,7 +743,7 @@
 		 });
 	 }
 
-	 if ((!filled && (found_target < 1 && found_attack < 1 && found_filter < 1 && found_os < 1 && !found_binName)) || (found_target == 0 || found_attack == 0 || found_filter == 0 || found_os == 0) || (!filled && item_chosen.length !== 0) || ((found_attack !== attack_chosen.length && found_attack !== -1) || (found_target !== target_chosen.length && found_target !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1)) || (binPattern.length !== 0 && !found_binName)) {
+	 if ((!filled && (found_environment < 1 && found_target < 1 && found_command < 1 && found_filter < 1 && found_os < 1 && !found_binName)) || (found_target == 0 || found_environment == 0 || found_command == 0 || found_filter == 0 || found_os == 0) || (!filled && item_chosen.length !== 0) || ((found_environment !== environment_chosen.length && found_environment !== -1) || (found_command !== command_chosen.length && found_command !== -1) || (found_target !== target_chosen.length && found_target !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1)) || (binPattern.length !== 0 && !found_binName)) {
 		row.style.display = 'none';
 	 } else {
 	    	row.style.display = '';

@@ -1,7 +1,11 @@
 ---
+SSH:
+  label: SSH
+  description: You've found the SSH service open and need to know what you can do with it.
+  
 SMB:
   label: SMB
-  description: You've found the SMB service open  and need to know what you can do with it.
+  description: You've found the SMB service open and need to know what you can do with it.
 
 WMI:
   label: WMI
