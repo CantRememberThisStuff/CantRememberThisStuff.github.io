@@ -26,3 +26,8 @@ Privilege_Escalation:
 Reverse_Shell:
   label: Reverse_Shell
   description: Command focuses on Reverse Shell.
+
+Brute_Force_Dictionary:
+  label: Brute-Force/Dictionary
+  description: Command focuses on Brute-Force/Dictionary attacks.
+  

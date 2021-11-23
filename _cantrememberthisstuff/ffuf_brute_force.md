@@ -1,6 +1,6 @@
 ---
 description: |
-  Example username enumeration with ffuf.
+  Example dictionary attack with ffuf.
 
   Command Reference:
 
@@ -16,15 +16,16 @@ description: |
     
     X: HTTP method
     
-    mr: Text on page, indicating username is valid.
+    fc: Status code to indicate success
     
     d: Data to send with the post request
     
-    FUZZ: The content to fuzz
+    W1: Usernames to fuzz
+    
+    W2: Passwords to fuzz
 
 command: |
-  ffuf -w <wordlist> -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u <target_url>/customers/signup -mr "username already exists"
-
+  ffuf -w <wordlist_usernames>:W1,<wordlist_passwords>:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.120.213/customers/login -fc 200
   
 items:
 
@@ -41,10 +42,8 @@ environment: |
   - Web
   
 command_types:
-  - Information_Gathering
-  - Host_Enumeration
   - Brute_Force_Dictionary
-
+  
 references:
   - https://github.com/ffuf/ffuf
 ---
