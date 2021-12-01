@@ -29,14 +29,20 @@ items:
   - ITEM
   - ITEM
   ...
+target: |
+  - OS_TARGET
 services:
   - SERVICE
   ...
 OS:
   - OS
   ...
-attack_types:
-  - ATTACK TYPE
+environment: |
+  - ENVIRONMENT
+  ...
+command_types:
+  - COMMAND_TYPE
+  ...
 references:
   - LINK
   - LINK
@@ -44,7 +50,7 @@ references:
 ---
 ```
 
-Where `ITEM` is one of the values described in the [`_data/items.yml`] file, `SERVICE` is one of the values described in the [`_data/services.yml`] file, `OS` is one of the values described in the [`_data/OS.yml`] file, `ATTACK_TYPE` is one of the values described in the [`_data/attack_types.yml`] file, and `LINK` is a link to download the related tool for that command as well as links to any other relevant information about what the command is doing. 
+Where `ITEM` is one of the values described in the [`_data/items.yml`] file, `SERVICE` is one of the values described in the [`_data/services.yml`] file, `OS` is one of the values described in the [`_data/OS.yml`] file, `COMMAND_TYPE` is one of the values described in the [`_data/command_types.yml`] file, and `LINK` is a link to download the related tool for that command as well as links to any other relevant information about what the command is doing. 
 
 Feel free to use any file in the [`_wadcoms/`] folder as an example.
 

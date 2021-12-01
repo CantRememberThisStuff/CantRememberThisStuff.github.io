@@ -84,14 +84,20 @@ items:
   - ITEM
   - ITEM
   ...
+target: |
+  - OS_TARGET
 services:
   - SERVICE
   ...
 OS:
   - OS
   ...
-attack_types:
-  - ATTACK TYPE
+environment: |
+  - ENVIRONMENT
+  ...
+command_types:
+  - COMMAND_TYPE
+  ...
 references:
   - LINK
   - LINK
@@ -99,7 +105,7 @@ references:
 ---
 </code></pre></div></div>
 
-<p>Where <code class="language-plaintext highlighter-rouge">ITEM</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/items.yml"><code class="language-plaintext highlighter-rouge">_data/items.yml</code></a> file, <code class="language-plaintext highlighter-rouge">SERVICE</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/services.yml"><code class="language-plaintext highlighter-rouge">_data/services.yml</code></a> file, <code class="language-plaintext highlighter-rouge">OS</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/OS.yml"><code class="language-plaintext highlighter-rouge">_data/OS.yml</code></a> file, <code class="language-plaintext highlighter-rouge">ATTACK_TYPE</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/attack_types.yml"><code class="language-plaintext highlighter-rouge">_data/attack_types.yml</code></a> file, and <code class="language-plaintext highlighter-rouge">LINK</code> is a link to download the related tool for that command as well as links to any other relevant information about what the command is doing.</p>
+<p>Where <code class="language-plaintext highlighter-rouge">ITEM</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/items.yml"><code class="language-plaintext highlighter-rouge">_data/items.yml</code></a> file, <code class="language-plaintext highlighter-rouge">SERVICE</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/services.yml"><code class="language-plaintext highlighter-rouge">_data/services.yml</code></a> file, <code class="language-plaintext highlighter-rouge">OS</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/OS.yml"><code class="language-plaintext highlighter-rouge">_data/OS.yml</code></a> file, <code class="language-plaintext highlighter-rouge">COMMAND_TYPE</code> is one of the values described in the [<code class="language-plaintext highlighter-rouge">_data/command_types.yml</code>] file, and <code class="language-plaintext highlighter-rouge">LINK</code> is a link to download the related tool for that command as well as links to any other relevant information about what the command is doing.</p>
 
 <p>Feel free to use any file in the [<code class="language-plaintext highlighter-rouge">_wadcoms/</code>] folder as an example.</p>
 

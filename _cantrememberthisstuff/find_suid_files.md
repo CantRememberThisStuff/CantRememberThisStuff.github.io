@@ -1,6 +1,6 @@
 ---
 description: |
-  Greps a lot of stuff in a single regex command. You can see why I could not remember this one, right? Used to grep interesting info from web pages, for example with cURL. Greps Passwords, Usernames and more interesting things.
+  Finds all files with the SUID bit set. To be used for privesc.
 
   Command Reference:
 
