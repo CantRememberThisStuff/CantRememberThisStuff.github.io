@@ -25,7 +25,9 @@ environment: |
   
 command_types:
   - Exploitation
-  
+  - Admin
+  - Social_Engineering
+
 references:
 
 ---

@@ -18,6 +18,8 @@ OS:
   - MacOS
 environment: |
   - Local
+  - Networking
+  
 command_types:
   - Reverse_Shell
 references:

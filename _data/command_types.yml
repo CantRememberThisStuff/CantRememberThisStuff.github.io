@@ -30,4 +30,7 @@ Reverse_Shell:
 Brute_Force_Dictionary:
   label: Brute-Force/Dictionary
   description: Command focuses on Brute-Force/Dictionary attacks.
-  
+
+Social_Engineering:
+  label: Social Engineering
+  description: Command focuses on Social Engineering.
