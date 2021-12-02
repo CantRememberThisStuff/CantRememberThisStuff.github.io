@@ -1,7 +1,7 @@
 ---
 description: |
   SSH reverse tunnel. Allows you to make a connection from a remote machine, to the initiator of the tunnel, without having direct access to the network. For example, to login to a machine whose network does not allow incoming connections, that machine can execute the following: "ssh -f -N -R 14000:localhost:22 user@10.10.10.10 -p 2222"
-  In this case the initiator will connect to the remote machine through SSH on port 2222 and create a tunnel from the remote host localhost:14000 to the initiator SSH port 22. Once run, you can login to the initiator from the remote machine, by "ssh initiator_user@localhost -p 14000". This works best when the remote machine accepts the pubkey from the initiator, otherwise a password needs to be entered.
+  In this case the initiator will connect to the remote machine (10.10.10.10) through SSH on port 2222 and create a tunnel from the remote host localhost:14000 to the initiator SSH port 22. Once run, you can login to the initiator from the remote machine, by "ssh initiator_user@localhost -p 14000". This works best when the remote machine accepts the pubkey from the initiator, otherwise a password needs to be entered.
 
   Command Reference:
 

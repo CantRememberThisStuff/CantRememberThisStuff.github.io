@@ -30,3 +30,19 @@ LDAP:
 NTLM:
   label: NTLM
   description: Command relates to the NTLM protocol.
+
+HTTP:
+  label: HTTP
+  description: Command relates to the HTTP protocol
+
+HTTPS:
+  label: HTTPS
+  description: Command relates to the HTTPS protocol
+
+SMTP:
+  label: SMTP
+  description: Command relates to the SMTP protocol
+
+SMTPS:
+  label: SMTPS
+  description: Command relates to the SMTPS protocol
