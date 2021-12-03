@@ -20,6 +20,7 @@ OS:
   
 environment: |
   - Local
+  - Docker
   
 command_types:
   - Admin

@@ -86,6 +86,7 @@ items:
   ...
 target: |
   - OS_TARGET
+  ...
 services:
   - SERVICE
   ...
@@ -105,24 +106,22 @@ references:
 ---
 </code></pre></div></div>
 
-<p>Where <code class="language-plaintext highlighter-rouge">ITEM</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/items.yml"><code class="language-plaintext highlighter-rouge">_data/items.yml</code></a> file, <code class="language-plaintext highlighter-rouge">SERVICE</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/services.yml"><code class="language-plaintext highlighter-rouge">_data/services.yml</code></a> file, <code class="language-plaintext highlighter-rouge">OS</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/OS.yml"><code class="language-plaintext highlighter-rouge">_data/OS.yml</code></a> file, <code class="language-plaintext highlighter-rouge">COMMAND_TYPE</code> is one of the values described in the [<code class="language-plaintext highlighter-rouge">_data/command_types.yml</code>] file, and <code class="language-plaintext highlighter-rouge">LINK</code> is a link to download the related tool for that command as well as links to any other relevant information about what the command is doing.</p>
+<p>Where <code class="language-plaintext highlighter-rouge">ITEM</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/items.yml"><code class="language-plaintext highlighter-rouge">_data/items.yml</code></a> file, <code class="language-plaintext highlighter-rouge">target</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/target.yml"><code class="language-plaintext highlighter-rouge">_data/target.yml</code></a> file, <code class="language-plaintext highlighter-rouge">SERVICE</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/services.yml"><code class="language-plaintext highlighter-rouge">_data/services.yml</code></a> file, <code class="language-plaintext highlighter-rouge">OS</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/OS.yml"><code class="language-plaintext highlighter-rouge">_data/OS.yml</code></a> file, <code class="language-plaintext highlighter-rouge">environment</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/environment.yml"><code class="language-plaintext highlighter-rouge">_data/environment.yml</code></a> file, <code class="language-plaintext highlighter-rouge">COMMAND_TYPE</code> is one of the values described in the <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/command_types.yml"><code class="language-plaintext highlighter-rouge">_data/command_types.yml</code></a> file, and <code class="language-plaintext highlighter-rouge">LINK</code> is a link to download the related tool for that command as well as links to any other relevant information about what the command is doing.</p>
 
-<p>Feel free to use any file in the [<code class="language-plaintext highlighter-rouge">_wadcoms/</code>] folder as an example.</p>
+<p>Feel free to use any file in the [<code class="language-plaintext highlighter-rouge">_cantrememberthis/</code>] folder as an example.</p>
 
 <h2 id="pull-request-process">Pull request process</h2>
-
-<p>I accept commands that run on either Linux or Windows, just as long as they target Windows machines (this is a Windows/AD cheat sheet after all).</p>
 
 <p>Before sending a pull request of a new command, ensure the following:</p>
 
 <ol>
-  <li>Verify the EXACT command works against at least one version of Windows.</li>
+  <li>Verify the command works.</li>
   <li>Any parts of the command that need context should go in the ‘Command References’, such as username, password, target IP, domain, etc. For consistency, if your command uses a username, password, domain, and/or target IP, use <code class="language-plaintext highlighter-rouge">john</code>, <code class="language-plaintext highlighter-rouge">password123</code>, <code class="language-plaintext highlighter-rouge">test.local</code> and <code class="language-plaintext highlighter-rouge">10.10.10.1</code> respectively.</li>
   <li>Include the proper filters related to your command. This currently means including any and all remote services required to be running on the Windows machine in order for the command to work, the Operating System the command can be run from, and the type of attack. For example, Impacket’s smbclient.py requires the SMB service to be running on the remote Windows machine, so SMB would be one of the services included. And since it can by run from any OS, Linux and Windows would be the OS that’s included. Finally, the attack type is Exploitation because you are getting a remote shell.</li>
   <li>Add a minimum, a link to download the related tool MUST be provided and added under <code class="language-plaintext highlighter-rouge">references</code>.</li>
 </ol>
 
-<p>Pull requests adding new items in <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/items.yml"><code class="language-plaintext highlighter-rouge">_data/items.yml</code></a>, services in <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/services.yml"><code class="language-plaintext highlighter-rouge">_data/services.yml</code></a>, OS in <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/OS.yml"><code class="language-plaintext highlighter-rouge">_data/OS.yml</code></a>, or attack types in <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/attack_types.yml"><code class="language-plaintext highlighter-rouge">_data/attack_types.yml</code></a> are allowed and subjected to project maintainers vetting.</p>
+<p>Pull requests adding new items in <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/items.yml"><code class="language-plaintext highlighter-rouge">_data/items.yml</code></a>, services in <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/services.yml"><code class="language-plaintext highlighter-rouge">_data/services.yml</code></a>, OS in <a href="https://github.com/CantRememberThisStuff/CantRememberThisStuff.github.io/blob/master/_data/OS.yml"><code class="language-plaintext highlighter-rouge">_data/OS.yml</code></a>, or attack types in [<code class="language-plaintext highlighter-rouge">_data/attack_types.yml</code>] are allowed and subjected to project maintainers vetting.</p>
 
 
 
