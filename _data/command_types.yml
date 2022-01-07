@@ -34,3 +34,8 @@ Brute_Force_Dictionary:
 Social_Engineering:
   label: Social Engineering
   description: Command focuses on Social Engineering.
+
+Buffer_Overflow:
+  label: Buffer Overflow
+  description: Command focuses on Buffer Overflows.
+  
