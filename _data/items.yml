@@ -18,3 +18,7 @@ Hash:
 Shell:
   label: Shell
   description: You have a shell on the target host and need to know what you can do.
+
+Binary:
+  label: Binary
+  description: You have a binary/executable and need to know what you can do.

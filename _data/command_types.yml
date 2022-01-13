@@ -38,4 +38,7 @@ Social_Engineering:
 Buffer_Overflow:
   label: Buffer Overflow
   description: Command focuses on Buffer Overflows.
-  
+
+Reverse_Engineering:
+  label: Reverse Engineering
+  description: Command focuses on Reverse Engineering
